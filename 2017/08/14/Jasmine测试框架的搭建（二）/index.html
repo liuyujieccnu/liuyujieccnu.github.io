@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Jasmine的安装在目标文件夹下 1jasmine init 配置Jasmine.json 可以运行jasmine examples获得一个实例，然后替换相关文件  1234567891011&amp;#123;    &quot;spec_dir&quot;:&quot;spec&quot;,    &quot;spec_files&quot;:[      &quot;**/*[sS]pec.js&quot;    ],    &quot;helpers&quot;:[        &quot;helpe">
+<meta name="description" content="node 初始化1npm init package.json 初始化1234567891011121314&amp;#123;  &quot;name&quot;: &quot;jasmine-median&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;: &quot;给定一个未排序的整数数组，找到其中位数。&quot;,  &quot;main&quot;: &quot;median.js&quot;,  &quot;scripts&quot;: &amp;#123;    &quot;test&quot;:">
 <meta name="keywords" content="Jasmine,JavaScript,测试,前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jasmine测试框架的搭建（一）">
-<meta property="og:url" content="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（一）/index.html">
+<meta property="og:title" content="Jasmine测试框架的搭建（二）">
+<meta property="og:url" content="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（二）/index.html">
 <meta property="og:site_name" content="Remember to eat breakfast">
-<meta property="og:description" content="Jasmine的安装在目标文件夹下 1jasmine init 配置Jasmine.json 可以运行jasmine examples获得一个实例，然后替换相关文件  1234567891011&amp;#123;    &quot;spec_dir&quot;:&quot;spec&quot;,    &quot;spec_files&quot;:[      &quot;**/*[sS]pec.js&quot;    ],    &quot;helpers&quot;:[        &quot;helpe">
+<meta property="og:description" content="node 初始化1npm init package.json 初始化1234567891011121314&amp;#123;  &quot;name&quot;: &quot;jasmine-median&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;: &quot;给定一个未排序的整数数组，找到其中位数。&quot;,  &quot;main&quot;: &quot;median.js&quot;,  &quot;scripts&quot;: &amp;#123;    &quot;test&quot;:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-14T00:16:39.000Z">
+<meta property="og:updated_time" content="2017-08-14T04:07:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jasmine测试框架的搭建（一）">
-<meta name="twitter:description" content="Jasmine的安装在目标文件夹下 1jasmine init 配置Jasmine.json 可以运行jasmine examples获得一个实例，然后替换相关文件  1234567891011&amp;#123;    &quot;spec_dir&quot;:&quot;spec&quot;,    &quot;spec_files&quot;:[      &quot;**/*[sS]pec.js&quot;    ],    &quot;helpers&quot;:[        &quot;helpe">
+<meta name="twitter:title" content="Jasmine测试框架的搭建（二）">
+<meta name="twitter:description" content="node 初始化1npm init package.json 初始化1234567891011121314&amp;#123;  &quot;name&quot;: &quot;jasmine-median&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;: &quot;给定一个未排序的整数数组，找到其中位数。&quot;,  &quot;main&quot;: &quot;median.js&quot;,  &quot;scripts&quot;: &amp;#123;    &quot;test&quot;:">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（一）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（二）/"/>
 
 
 
 
 
-  <title>Jasmine测试框架的搭建（一） | Remember to eat breakfast</title>
+  <title>Jasmine测试框架的搭建（二） | Remember to eat breakfast</title>
   
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/Jasmine测试框架的搭建（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scott Liu">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Jasmine测试框架的搭建（一）</h1>
+          <h1 class="post-title" itemprop="name headline">Jasmine测试框架的搭建（二）</h1>
         
 
         <div class="post-meta">
@@ -286,7 +286,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T08:02:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T11:20:53+08:00">
                 2017-08-14
               </time>
             
@@ -346,29 +346,17 @@
       
 
       
-        <h4 id="Jasmine的安装"><a href="#Jasmine的安装" class="headerlink" title="Jasmine的安装"></a>Jasmine的安装</h4><p>在目标文件夹下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jasmine init</div></pre></td></tr></table></figure>
-<h4 id="配置Jasmine-json"><a href="#配置Jasmine-json" class="headerlink" title="配置Jasmine.json"></a>配置Jasmine.json</h4><blockquote>
-<p>可以运行<code>jasmine examples</code>获得一个实例，然后替换相关文件</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"spec_dir"</span>:<span class="string">"spec"</span>,</div><div class="line">    <span class="attr">"spec_files"</span>:[</div><div class="line">      <span class="string">"**/*[sS]pec.js"</span></div><div class="line">    ],</div><div class="line">    <span class="attr">"helpers"</span>:[</div><div class="line">        <span class="string">"helpers/**/*.js"</span></div><div class="line">    ],</div><div class="line">    stopSpecOnExpectationFailure:false,</div><div class="line">    random:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>spec_dir：根目录（下面两个参数的前缀），下面的spec_files和helpers都是相对于spec_dir的。</li>
-<li>spec_files: 测试文件所在位置,这里的”*/[sS]spec.js”表示在目录spec下面的所有后缀名为spec或Spec的js文件。</li>
-<li>helpers: 存放正式js文件，就是我们测试的目标文件，spec_files就是用来测试helpers的，这里同样是相对路径（相对spec_dir）</li>
-<li>stopSpecOnExpectationFailure:这个参数从字面意思上是“当一个spec出现异常时是否停止该spec”，实际上也就是这个意思，一个spec中可以有多个expect,true为停止，false为不停止。</li>
-</ul>
-<h4 id="Jasmine测试spec"><a href="#Jasmine测试spec" class="headerlink" title="Jasmine测试spec"></a>Jasmine测试spec</h4><pre><code class="JavaScript">describe(<span class="string">'your test name'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-    it(<span class="string">"contains spec with an expectation"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-       expect(<span class="literal">true</span>).toBe(<span class="literal">true</span>);    <span class="comment">//true==true为true，正确</span>
-    });
-
-    it(<span class="string">"the second it"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-       expect(<span class="literal">true</span>).toBe(<span class="literal">false</span>);  <span class="comment">//true==false为false，会报错</span>
-    });
-});
-</code></pre>
-<h4 id="Jasmine被测试的文件"><a href="#Jasmine被测试的文件" class="headerlink" title="Jasmine被测试的文件"></a>Jasmine被测试的文件</h4><p>在被测试的文件的末尾加上<code>module.exports = function_name;</code><br>就是在模块最后写好模块接口，声明这个模块对外暴露什么内容。</p>
+        <h4 id="node-初始化"><a href="#node-初始化" class="headerlink" title="node 初始化"></a>node 初始化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<h4 id="package-json-初始化"><a href="#package-json-初始化" class="headerlink" title="package.json 初始化"></a>package.json 初始化</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"jasmine-median"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"给定一个未排序的整数数组，找到其中位数。"</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"median.js"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"jasmine-node --verbose ./"</span> //指定npm test命令，./是spec文件所在的文件夹。</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;</div><div class="line">    <span class="attr">"jasmine-node"</span>: <span class="string">"1.14.5"</span> //相关依赖的包</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">"Yu-Jay Lau"</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://javascript.ruanyifeng.com/nodejs/packagejson.html" target="_blank" rel="external">关于package.json的更多信息</a></p>
+<h4 id="安装package-json中的相关包"><a href="#安装package-json中的相关包" class="headerlink" title="安装package.json中的相关包"></a>安装package.json中的相关包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<h4 id="开始测试"><a href="#开始测试" class="headerlink" title="开始测试"></a>开始测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm test</div></pre></td></tr></table></figure>
+<h4 id="测试样例"><a href="#测试样例" class="headerlink" title="测试样例"></a>测试样例</h4><p>median.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">median</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> res=<span class="number">0</span>;</div><div class="line">    arr.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a-b);</div><div class="line">    <span class="keyword">if</span>(arr.length%<span class="number">2</span>===<span class="number">0</span>)&#123;</div><div class="line">        res=(arr[arr.length/<span class="number">2</span>]+arr[arr.length/<span class="number">2</span><span class="number">-1</span>])/<span class="number">2</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        res=arr[<span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>)];</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(res);</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = median; <span class="comment">//可见的模块</span></div></pre></td></tr></table></figure>
+<p>median_spec.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> median= <span class="built_in">require</span>(<span class="string">'./median.js'</span>); <span class="comment">//引用median.js中可见的模块</span></div><div class="line"></div><div class="line">describe(<span class="string">"the_median"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    it(<span class="string">"test"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">let</span> arr = [<span class="number">9</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line">        <span class="keyword">let</span> result = <span class="number">4</span>;</div><div class="line">        expect(median(arr)).toEqual(result);</div><div class="line">      &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><a href="https://github.com/liuyujieccnu/thoughtworksPhysicalTest/tree/master/the_median" target="_blank" rel="external">代码地址</a></p>
+<p>更多关于Jasmine的知识：<br><a href="http://blog.csdn.net/guojiangweigege/article/details/52121876" target="_blank" rel="external">中文Jasmine文档（一）</a><br><a href="http://blog.csdn.net/GuoJiangweigege/article/details/52130589" target="_blank" rel="external">中文Jasmine文档（二）</a><br><a href="http://blog.csdn.net/GuoJiangweigege/article/details/52130823" target="_blank" rel="external">中文Jasmine文档（三）</a><br><a href="https://jasmine.github.io/2.4/introduction.html" target="_blank" rel="external">Jasmine官方文档</a></p>
 
       
     </div>
@@ -405,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/13/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/08/14/Jasmine测试框架的搭建（一）/" rel="next" title="Jasmine测试框架的搭建（一）">
+                <i class="fa fa-chevron-left"></i> Jasmine测试框架的搭建（一）
               </a>
             
           </div>
@@ -414,10 +402,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/14/Jasmine测试框架的搭建（二）/" rel="prev" title="Jasmine测试框架的搭建（二）">
-                Jasmine测试框架的搭建（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -551,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Jasmine的安装"><span class="nav-number">1.</span> <span class="nav-text">Jasmine的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Jasmine-json"><span class="nav-number">2.</span> <span class="nav-text">配置Jasmine.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jasmine测试spec"><span class="nav-number">3.</span> <span class="nav-text">Jasmine测试spec</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jasmine被测试的文件"><span class="nav-number">4.</span> <span class="nav-text">Jasmine被测试的文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#node-初始化"><span class="nav-number">1.</span> <span class="nav-text">node 初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#package-json-初始化"><span class="nav-number">2.</span> <span class="nav-text">package.json 初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装package-json中的相关包"><span class="nav-number">3.</span> <span class="nav-text">安装package.json中的相关包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开始测试"><span class="nav-number">4.</span> <span class="nav-text">开始测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试样例"><span class="nav-number">5.</span> <span class="nav-text">测试样例</span></a></li></ol></div>
             
 
           </div>
