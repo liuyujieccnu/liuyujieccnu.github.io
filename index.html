@@ -277,6 +277,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/04/JavaScript事件及其监听/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yu-Jay Lau">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Remember to eat breakfast">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/04/JavaScript事件及其监听/" itemprop="url">JavaScript事件及其监听</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T10:26:06+08:00">
+                2017-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript学习/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/04/JavaScript事件及其监听/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/10/04/JavaScript事件及其监听/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="HTML事件与JavaScript事件"><a href="#HTML事件与JavaScript事件" class="headerlink" title="HTML事件与JavaScript事件"></a>HTML事件与JavaScript事件</h3><ul>
+<li>HTML事件是发生在HTML元素上的事情。</li>
+<li>当在HTML页面中使用JavaScript时，JavaScript可以触发这些事件。</li>
+</ul>
+<p><a href="http://www.runoob.com/jsref/dom-obj-event.html" target="_blank" rel="external">HTML DOM 事件</a></p>
+<h3 id="事件的监听"><a href="#事件的监听" class="headerlink" title="事件的监听"></a>事件的监听</h3><h4 id="当同一个对象使用-onclick的写法触发多个方法的时候，后一个方法会把前一个方法覆盖掉，也就是说，在对象的onclick事件发生时，只会执行最后绑定的方法。而用事件监听则不会有覆盖的现象，每个绑定的事件都会被执行。"><a href="#当同一个对象使用-onclick的写法触发多个方法的时候，后一个方法会把前一个方法覆盖掉，也就是说，在对象的onclick事件发生时，只会执行最后绑定的方法。而用事件监听则不会有覆盖的现象，每个绑定的事件都会被执行。" class="headerlink" title="当同一个对象使用.onclick的写法触发多个方法的时候，后一个方法会把前一个方法覆盖掉，也就是说，在对象的onclick事件发生时，只会执行最后绑定的方法。而用事件监听则不会有覆盖的现象，每个绑定的事件都会被执行。"></a>当同一个对象使用<code>.onclick</code>的写法触发多个方法的时候，后一个方法会把前一个方法覆盖掉，也就是说，在对象的<code>onclick</code>事件发生时，只会执行最后绑定的方法。而用事件监听则不会有覆盖的现象，每个绑定的事件都会被执行。</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"yuanEvent"</span>); </div><div class="line"> btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">  alert(<span class="string">"第一个事件"</span>); </div><div class="line"> &#125; </div><div class="line"> btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">  alert(<span class="string">"第二个事件"</span>); </div><div class="line"> &#125; </div><div class="line"> btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">  alert(<span class="string">"第三个事件"</span>); </div><div class="line"> &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>最后只输出：第三个事件，因为后一个方法都把前一个方法覆盖掉了</li>
+</ul>
+<h4 id="原生态的事件绑定函数addEventListener"><a href="#原生态的事件绑定函数addEventListener" class="headerlink" title="原生态的事件绑定函数addEventListener"></a>原生态的事件绑定函数addEventListener</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> eventOne = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第一个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventTwo</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第二个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"yuanEvent"</span>); </div><div class="line"> <span class="comment">//addEventListener：绑定函数 </span></div><div class="line"> btn.addEventListener(<span class="string">"click"</span>,eventOne); </div><div class="line"> btn.addEventListener(<span class="string">"click"</span>,eventTwo); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>输出：第一个监听事件 和 第二个监听事件</li>
+</ul>
+<h3 id="采用事件监听给对象绑定方法后，可以解除相应的绑定"><a href="#采用事件监听给对象绑定方法后，可以解除相应的绑定" class="headerlink" title="采用事件监听给对象绑定方法后，可以解除相应的绑定"></a>采用事件监听给对象绑定方法后，可以解除相应的绑定</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> eventOne = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第一个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventTwo</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第二个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"yuanEvent"</span>); </div><div class="line"> btn.addEventListener(<span class="string">"click"</span>,eventOne); </div><div class="line"> btn.addEventListener(<span class="string">"click"</span>,eventTwo); </div><div class="line"> btn.removeEventListener(<span class="string">"click"</span>,eventOne); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>输出：第二个监听事件</li>
+</ul>
+<h3 id="解除绑定事件的时候一定要用函数的句柄，把整个函数写上是无法解除绑定的"><a href="#解除绑定事件的时候一定要用函数的句柄，把整个函数写上是无法解除绑定的" class="headerlink" title="解除绑定事件的时候一定要用函数的句柄，把整个函数写上是无法解除绑定的"></a>解除绑定事件的时候一定要用函数的句柄，把整个函数写上是无法解除绑定的</h3><ul>
+<li>错误写法：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="number">11</span>); </div><div class="line">&#125;); </div><div class="line">btn.removeEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="number">11</span>); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>正确写法：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">btn.addEventListener(<span class="string">"click"</span>,eventTwo); </div><div class="line">btn.removeEventListener(<span class="string">"click"</span>,eventOne);</div></pre></td></tr></table></figure>
+<h3 id="总结：对函数进行封装后的监听事件如下，兼容各大主流浏览器。"><a href="#总结：对函数进行封装后的监听事件如下，兼容各大主流浏览器。" class="headerlink" title="总结：对函数进行封装后的监听事件如下，兼容各大主流浏览器。"></a>总结：对函数进行封装后的监听事件如下，兼容各大主流浏览器。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * addEventListener:监听Dom元素的事件 </span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> * target：监听对象 </span></div><div class="line"><span class="comment"> * type：监听函数类型，如click,mouseover </span></div><div class="line"><span class="comment"> * func：监听函数 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventHandler</span>(<span class="params">target,type,func</span>)</span>&#123; </div><div class="line"> <span class="keyword">if</span>(target.addEventListener)&#123; </div><div class="line">  <span class="comment">//监听IE9，谷歌和火狐 </span></div><div class="line">  target.addEventListener(type, func, <span class="literal">false</span>); </div><div class="line"> &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target.attachEvent)&#123; </div><div class="line">  target.attachEvent(<span class="string">"on"</span> + type, func); </div><div class="line"> &#125;<span class="keyword">else</span>&#123; </div><div class="line">  target[<span class="string">"on"</span> + type] = func; </div><div class="line"> &#125; </div><div class="line">&#125; </div><div class="line"><span class="comment">/* </span></div><div class="line"><span class="comment"> * removeEventHandler:移除Dom元素的事件 </span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> * target：监听对象 </span></div><div class="line"><span class="comment"> * type：监听函数类型，如click,mouseover </span></div><div class="line"><span class="comment"> * func：监听函数 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEventHandler</span>(<span class="params">target, type, func</span>) </span>&#123; </div><div class="line"> <span class="keyword">if</span> (target.removeEventListener)&#123; </div><div class="line">  <span class="comment">//监听IE9，谷歌和火狐 </span></div><div class="line">  target.removeEventListener(type, func, <span class="literal">false</span>); </div><div class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (target.detachEvent)&#123; </div><div class="line">  target.detachEvent(<span class="string">"on"</span> + type, func); </div><div class="line"> &#125;<span class="keyword">else</span> &#123; </div><div class="line">  <span class="keyword">delete</span> target[<span class="string">"on"</span> + type]; </div><div class="line"> &#125; </div><div class="line">&#125; </div><div class="line"><span class="keyword">var</span> eventOne = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第一个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventTwo</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> alert(<span class="string">"第二个监听事件"</span>); </div><div class="line">&#125; </div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line"> <span class="keyword">var</span> bindEventBtn = <span class="built_in">document</span>.getElementById(<span class="string">"bindEvent"</span>); </div><div class="line"> <span class="comment">//监听eventOne事件 </span></div><div class="line"> addEventHandler(bindEventBtn,<span class="string">"click"</span>,eventOne); </div><div class="line"> <span class="comment">//监听eventTwo事件 </span></div><div class="line"> addEventHandler(bindEventBtn,<span class="string">"click"</span>,eventTwo ); </div><div class="line"> <span class="comment">//监听本身的事件 </span></div><div class="line"> addEventHandler(bindEventBtn,<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">  alert(<span class="string">"第三个监听事件"</span>); </div><div class="line"> &#125;); </div><div class="line"> <span class="comment">//取消第一个监听事件 </span></div><div class="line"> removeEventHandler(bindEventBtn,<span class="string">"click"</span>,eventOne); </div><div class="line"> <span class="comment">//取消第二个监听事件 </span></div><div class="line"> removeEventHandler(bindEventBtn,<span class="string">"click"</span>,eventTwo); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>实例：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt; </div><div class="line">&lt;html&gt; </div><div class="line"> &lt;head&gt; </div><div class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt; </div><div class="line">  &lt;title&gt;Event&lt;<span class="regexp">/title&gt; </span></div><div class="line"><span class="regexp">  &lt;script type="text/</span>javascript<span class="string">"&gt; </span></div><div class="line"><span class="string">   function addEventHandler(target,type,func)&#123; </span></div><div class="line"><span class="string">    if(target.addEventListener)&#123; </span></div><div class="line"><span class="string">     //监听IE9，谷歌和火狐 </span></div><div class="line"><span class="string">     target.addEventListener(type, func, false); </span></div><div class="line"><span class="string">    &#125;else if(target.attachEvent)&#123; </span></div><div class="line"><span class="string">     target.attachEvent("</span>on<span class="string">" + type, func); </span></div><div class="line"><span class="string">    &#125;else&#123; </span></div><div class="line"><span class="string">     target["</span>on<span class="string">" + type] = func; </span></div><div class="line"><span class="string">    &#125; </span></div><div class="line"><span class="string">   &#125; </span></div><div class="line"><span class="string">   function removeEventHandler(target, type, func) &#123; </span></div><div class="line"><span class="string">    if (target.removeEventListener)&#123; </span></div><div class="line"><span class="string">     //监听IE9，谷歌和火狐 </span></div><div class="line"><span class="string">     target.removeEventListener(type, func, false); </span></div><div class="line"><span class="string">    &#125; else if (target.detachEvent)&#123; </span></div><div class="line"><span class="string">     target.detachEvent("</span>on<span class="string">" + type, func); </span></div><div class="line"><span class="string">    &#125;else &#123; </span></div><div class="line"><span class="string">     delete target["</span>on<span class="string">" + type]; </span></div><div class="line"><span class="string">    &#125; </span></div><div class="line"><span class="string">   &#125; </span></div><div class="line"><span class="string">   var eventOne = function()&#123; </span></div><div class="line"><span class="string">    alert("</span>第一个监听事件<span class="string">"); </span></div><div class="line"><span class="string">   &#125; </span></div><div class="line"><span class="string">   function eventTwo()&#123; </span></div><div class="line"><span class="string">    alert("</span>第二个监听事件<span class="string">"); </span></div><div class="line"><span class="string">   &#125; </span></div><div class="line"><span class="string">   window.onload = function()&#123; </span></div><div class="line"><span class="string">    var bindEventBtn = document.getElementById("</span>bindEvent<span class="string">"); </span></div><div class="line"><span class="string">    //监听eventOne事件 </span></div><div class="line"><span class="string">    addEventHandler(bindEventBtn,"</span>click<span class="string">",eventOne); </span></div><div class="line"><span class="string">    //监听eventTwo事件 </span></div><div class="line"><span class="string">    addEventHandler(bindEventBtn,"</span>click<span class="string">",eventTwo ); </span></div><div class="line"><span class="string">    //监听本身的事件 </span></div><div class="line"><span class="string">    addEventHandler(bindEventBtn,"</span>click<span class="string">",function()&#123; </span></div><div class="line"><span class="string">     alert("</span>第三个监听事件<span class="string">"); </span></div><div class="line"><span class="string">    &#125;); </span></div><div class="line"><span class="string">    //取消第一个监听事件 </span></div><div class="line"><span class="string">    removeEventHandler(bindEventBtn,"</span>click<span class="string">",eventOne); </span></div><div class="line"><span class="string">    //取消第二个监听事件 </span></div><div class="line"><span class="string">    removeEventHandler(bindEventBtn,"</span>click<span class="string">",eventTwo); </span></div><div class="line"><span class="string">   &#125; </span></div><div class="line"><span class="string">  &lt;/script&gt; </span></div><div class="line"><span class="string"> &lt;/head&gt; </span></div><div class="line"><span class="string"> &lt;body&gt; </span></div><div class="line"><span class="string">  &lt;input type="</span>button<span class="string">" value="</span>测试<span class="string">" id="</span>bindEvent<span class="string">"&gt; </span></div><div class="line"><span class="string">  &lt;input type="</span>button<span class="string">" value="</span>测试<span class="number">2</span><span class="string">" id="</span>yuanEvent<span class="string">"&gt; </span></div><div class="line"><span class="string"> &lt;/body&gt; </span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/29/for...in 与 for...of/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1970,7 +2153,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
